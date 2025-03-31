@@ -483,10 +483,12 @@ class SaleClientViewSet(viewsets.ModelViewSet):
         sale = serializer.save(customer_id=user.id, total=total)
         for product, quantity in product_instances:
             product.stock -= quantity
+            verbo = "agendan" if quantity > 1 else "agenda"
+            unidad = "unidades" if quantity > 1 else "unidad" 
             ProductsHistory.objects.create(
                 product_id=product.id,
                 kind="SALIDA",
-                description=f"Se {"agendan" if quantity > 1 else "agenda"} {quantity} {"unidades" if quantity > 1 else "unidad"} del producto {product.name}, stock restante: {product.stock}.",
+                description = f"Se {verbo} {quantity} {unidad} del producto {product.name}, stock restante: {product.stock}.",
                 sale_id=sale.id
             )
             if product.stock <= product.min_stock:
