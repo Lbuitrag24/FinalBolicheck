@@ -213,7 +213,7 @@ class UsersViewSet(viewsets.ModelViewSet):
             user.is_active = not user.is_active
             user.save()
             return Response(
-                {"message": f"La cuenta del usuario ha sido {"habilitada, ahora podrà iniciar sesiòn." if user.is_active else "inhabilitada, no podrà iniciar sesiòn."}"},
+                {"message": f"La cuenta del usuario ha sido {'habilitada, ahora podrá iniciar sesión.' if user.is_active else 'inhabilitada, no podrá iniciar sesión.'}"}
                 status=status.HTTP_200_OK
             )
         except CustomUser.DoesNotExist:
