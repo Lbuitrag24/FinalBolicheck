@@ -692,11 +692,13 @@ class SaleViewSet(viewsets.ModelViewSet):
                 raise ValidationError(
                     {"message": f"Lo sentimos, el producto {product.name} no se encuentra disponible."})
             product.stock -= product_data["quantity"]
+            verbo = 'venden' if product_data['quantity'] > 1 else 'vende'
+            unidad = 'unidades' if product_data['quantity'] > 1 else 'unidad'
             ProductsHistory.objects.create(
                 product_id=product.id,
                 kind="SALIDA",
                 by=self.request.user,
-                description=f"Se {"venden" if product_data["quantity"] > 1 else "vende"} {product_data["quantity"]} {"unidades" if product_data["quantity"] > 1 else "unidad"} del producto {product.name}, stock restante: {product.stock}.",
+                description = f"Se {verbo} {product_data['quantity']} {unidad} del producto {product.name}, stock restante: {product.stock}.",
                 sale_id=sale.id
             )
             if product.stock < product.min_stock:
