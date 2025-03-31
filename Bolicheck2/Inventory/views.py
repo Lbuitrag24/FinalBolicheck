@@ -775,14 +775,17 @@ class SaleViewSet(viewsets.ModelViewSet):
             for product in sale.products.all():
                 recoverStock = (product.quantity)
                 product.product.stock += recoverStock
+                verbo = 'devuelven' if recoverStock > 1 else 'devuelve'
+                unidad = 'unidades' if recoverStock > 1 else 'unidad'
                 ProductsHistory.objects.create(
                     product_id=product.product.id,
                     kind="ENTRADA",
-                    description=f"Se {"devuelven" if recoverStock > 1 else "devuelve"} {recoverStock} {"unidades" if recoverStock > 1 else "unidad"} del producto {product.product.name} debido a que una venta ha sido cancelada.",
+                    description = f"Se {verbo} {recoverStock} {unidad} del producto {product.product.name} debido a que una venta ha sido cancelada.",
                     sale_id = sale.id
                 )
                 if product.product.stock > 0 and product.product.is_available == False:
                     product.product.is_available = True
+
                     ProductsHistory.objects.create(
                         product_id=product.product.id,
                         kind="HABILITACION",
