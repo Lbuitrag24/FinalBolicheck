@@ -26,6 +26,7 @@ class PrizeViewSet(viewsets.ModelViewSet):
                 return Response({"message": "No se puede habilitar el premio, pues no hay stock del mismo."}, status=status.HTTP_400_BAD_REQUEST)
             prize.is_available = not prize.is_available
             prize.save()
-            return Response({"message": f"El premio ahora tiene el estado de {"disponible" if prize.is_available else "no disponible"}."}, status=status.HTTP_200_OK)
+            estado = 'disponible' if prize.is_available else 'no disponible'
+            return Response({"message": f"El premio ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK),
         except Prizes.DoesNotExist:
             return Response({"message": "El premio no ha sido encontrado."}, status=status.HTTP_404_NOT_FOUND)
