@@ -15,7 +15,7 @@ npm install
 npm run build
 
 # Mover la build de React al backend
-mv build ../static/react
+mv dist ../static
 
 # Volver al backend
 cd ..
