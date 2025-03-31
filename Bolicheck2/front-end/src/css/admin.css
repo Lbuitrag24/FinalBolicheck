@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo_pagina {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Estilos del Header */
+.navbar {
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* Estilos del Menú de Navegación */
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilos del formulario de búsqueda y sesión */
+.d-flex {
+    align-items: center;
+}
+
+.buscar {
+    max-width: 200px;
+}
+
+.btn-success, .btn-primary {
+    white-space: nowrap;
+}
+
+/* Ajuste del dropdown de sesión */
+.dropdown-menu {
+    width: auto;
+    min-width: 150px;
+    text-align: center;
+}
+
+.dropdown-menu .btn {
+    width: 90%;
+    margin: 5px auto;
+    display: block;
+}
+
+/* Footer */
+.pie_pagina {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.pie_pagina a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .buscar {
+        max-width: 100%;
+        width: 100%;
+    }
+    .dropdown-menu {
+        width: 100%;
+    }
+    .dropdown-menu .btn {
+        width: 100%;
+    }
+}

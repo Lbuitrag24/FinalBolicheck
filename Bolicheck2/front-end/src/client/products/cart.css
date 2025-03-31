@@ -1,0 +1,14 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #262626;
+    padding: 1.5%;
+    border-radius: 1%;
+}

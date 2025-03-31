@@ -1,0 +1,339 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fondo_pagina {
+  position: relative;
+}
+
+.fondo_pagina::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/public/fondoverde.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.titulo_nosotros {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.titulo_nosotros h1 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.titulo_nosotros h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+}
+
+.titulo_nosotros p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+.nosotros_sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  flex: 1;
+  overflow: hidden;
+}
+
+.imagen img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.2);
+}
+
+.cotenido_nosotros {
+  flex: 1;
+}
+.cotenido_nosotros p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.titulo {
+  text-align: center;
+  font-family: fantasy;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.titulo {
+  text-align: center;
+  font-family: fantasy;
+}
+
+.Productos {
+  display: inline-block;
+  position: relative;
+  color: white;
+  padding-bottom: 8px; 
+  border-bottom: 3px solid white;
+}
+
+.ranita_home {
+  width: 170px;
+}
+
+.logo {
+  width: 45px;
+}
+
+.pie_pagina {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  color: white;
+  padding: 20px 0;
+  background-color: #0a141d;
+}
+
+.pie_pagina .grupo_1 {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie_pagina .grupo_1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie_pagina .grupo_1 .box figure img {
+  width: 250px;
+}
+
+.pie_pagina .grupo_1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.pie_pagina .grupo_1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie_pagina .grupo_1 .red_social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie_pagina .grupo_1 .red_social a:hover {
+  color: rgba(247, 220, 111);
+}
+
+.pie_pagina .grupo_2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.titulo_nosotros {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.titulo_nosotros h1 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.titulo_nosotros h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+}
+
+.titulo_nosotros p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+.direccion {
+  color: #fff;
+}
+
+.telefono {
+  color: #fff;
+  margin: 30px.0;
+}
+
+.contactanos_form {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin-top: 90px;
+}
+
+.contactanos_form h2 {
+  margin-bottom: 15px;
+  font-size: 35px;
+  color: white;
+}
+
+.contactanos_form p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contactanos_form a {
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 16px;
+  color: white;
+  font-weight: 700;
+}
+
+.contactanos_form a i {
+  margin-right: 10px;
+}
+
+.contactanos_form form .campo,
+textarea {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+}
+
+.contactanos_form form textarea {
+  max-width: 530px;
+  min-width: 530px;
+  min-height: 140px;
+  max-height: 150px;
+}
+
+.contactanos_form .btn-enviar_mensaje {
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: #ffc107;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.avatar-container {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out;
+}
+
+.avatar-container:hover .user-photo {
+  filter: blur(4px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.avatar-container:hover .overlay {
+  opacity: 1;
+}
+
+.edit-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

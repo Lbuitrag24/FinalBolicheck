@@ -1,0 +1,325 @@
+.form-style {
+  background-color: #0a141d;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.history-form-style {
+  border: 1px white solid;
+  background-color: #042a4b;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.card-style {
+  background-color: #112231;
+  border: 1px #2a2a3a solid;
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: none;
+}
+
+.categories{
+  border-top: 5px #06ad00 solid;
+}
+
+.products{
+  border-top: 5px #0097dd solid;
+}
+
+.prizes{
+  border-top: 5px #cc0000 solid;
+}
+
+.blocked{
+  border-top: 5px #ffffff solid;
+}
+
+.search-form-style {
+  background-color: rgba(126, 126, 126, 0.116);
+  backdrop-filter: blur(1px);
+  color: white;
+}
+
+.form-style form input {
+  background-color: #02a2ca69;
+  box-shadow: 5px 5px 1px 0px #006696;
+  color: white;
+  border: none;
+  transition: .5s;
+}
+
+.form-style form input:focus {
+  background-color: #02a2ca69;
+  outline: none;
+  box-shadow: 0px 0px 0px 0px #006696;
+  color: white;
+  border: none;
+  transition: .5s;
+}
+
+.form-style form textarea {
+  background-color: #02a2ca69;
+  box-shadow: 5px 5px 1px 0px #006696;
+  color: white;
+  border: none;
+  transition: .5s;
+}
+
+.form-style form textarea:focus {
+  background-color: #02a2ca69;
+  box-shadow: 0px 0px 0px 0px #006696;
+  color: white;
+  border: none;
+  transition: .5s;
+}
+
+.form-style form select {
+  background-color: #02a2ca69;
+  box-shadow: 5px 5px 1px 0px #006696;
+  color: white;
+  border: none;
+}
+
+.form-style form select:focus {
+  background-color: #02a2ca69;
+  color: white;
+  box-shadow: 0px 0px 0px 0px #006696;
+  border: none;
+  outline: none;
+}
+
+.form-style form select option {
+  background-color: #333333;
+  color: white;
+}
+
+.inner-input-style {
+  background-color: #02a2ca69;
+  box-shadow: 5px 5px 1px 0px #006696;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.inner-input-style:focus {
+  background-color: #02a2ca69;
+  color: white;
+  border: none;
+  box-shadow: 0px 0px 0px 0px #006696;
+}
+
+.inner-input-style::placeholder,
+.inner-input-style:focus::placeholder {
+  color: white;
+}
+
+.inner-input-style {
+  background-color: #02a2ca69;
+  color: white;
+  border: none;
+}
+
+.inner-select-style,
+.inner-select-style:focus {
+  background-color: #02a2ca69;
+  box-shadow: 5px 5px 1px 0px #006696;
+  color: white;
+  border: none;
+}
+
+.inner-select-style option {
+  background-color: #333;
+  color: white;
+}
+
+.sellings-card-style {
+  background-color: rgba(0, 4, 7, 0.267);
+  border: none;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.history-card {
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
+.subsellings-card-style {
+  border: 2px rgba(0, 247, 255, 0.575) solid;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.edit-btn-style {
+  background-color: transparent;
+  border: 1px #ffffff solid;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 1px 0px #c4c4c4;
+  transition: 0.2s;
+}
+
+.edit-btn-style:hover {
+  background-color: #014b8d;
+  border: 1px #ffffff solid;
+  box-shadow: 0px 0px 0px 0px #c4c4c4;
+  transition: 0.2s;
+}
+
+.delete-btn-style {
+  background-color: transparent;
+  border: 2px #b10000 solid;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 1px 0px #740000;
+  transition: 0.2s;
+}
+
+.delete-btn-style:hover {
+  background-color: #290000;
+  border: 2px #b10000 solid;
+  box-shadow: 0px 0px 0px 0px #740000;
+  transition: 0.2s;
+}
+
+.new-btn-style {
+  background-color: transparent;
+  border: 2px #06ad00 solid;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 1px 0px #058b00;
+  transition: 0.2s;
+}
+
+.new-btn-style:hover {
+  background-color: #035a00;
+  border: 2px #06ad00 solid;
+  box-shadow: 0px 0px 0px 0px #058b00;
+  transition: 0.2s;
+}
+
+.secondary-btn-style{
+  background-color: transparent;
+  border: 2px #0097dd solid;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 1px 0px #006696;
+  transition: 0.2s;
+}
+
+.secondary-btn-style:hover {
+  background-color: #0072a7;
+  border: 2px #0097dd solid;
+  box-shadow: 0px 0px 0px 0px #006696;
+  transition: 0.2s;
+}
+
+.yellow-btn-style{
+  background-color: transparent;
+  border: 2px #ddc700 solid;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 1px 0px #939600;
+  transition: 0.2s;
+}
+
+.yellow-btn-style:hover {
+  background-color: #a7a400;
+  border: 2px #ddd900 solid;
+  box-shadow: 0px 0px 0px 0px #939600;
+  transition: 0.2s;
+}
+
+.points-badge {
+  background-color: #0a6bc6;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 5px solid #112231;
+  position: absolute;
+  left: 85%;
+  top: 7%;
+  transform: translateX(-55%);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.reserve-badge {
+  background-color: transparent;
+  border: 2px #00be46 solid;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 1px;
+}
+
+.redemption-badge {
+  background-color: transparent;
+  border: 2px #5b00d1 solid;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 1px;
+}
+
+.text-disabled{
+  color: red;
+}
+
+.image-container {
+  position: relative;
+  width: 20vw;
+  height: 30vh;
+  cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.image.hovered {
+  filter: blur(4px) brightness(75%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.history-modal {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}

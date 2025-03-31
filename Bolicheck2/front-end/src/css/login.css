@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('/public/imagen_fondo2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.class_ranita_imagen {
+  width: 100px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+
+.wrapper .input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .35);
+  border-radius: 40px;
+  font-size: 15px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.input_box input::placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+
+.input_box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+.wrapper .remember {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+  flex-wrap: wrap;
+}
+
+.remember label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.wrapper .link_registrarse {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.link_registrarse p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link_registrarse p a:hover {
+  text-decoration: underline;
+}
+
+.flecha_atras {
+  width: 50px;
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forgot-password-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 90%;
+  width: 400px;
+}
+
+.forgot-password-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.forgot-password-container p {
+  color: white;
+}
+
+.forgot-password-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password-container input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.forgot-password-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forgot-password-container button:hover {
+  background: #0056b3;
+}
+
+.forgot-password-container a {
+  display: block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.forgot-password-container a:hover {
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+  color: white;
+}

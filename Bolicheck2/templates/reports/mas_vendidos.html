@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los + Vendidos</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('http://127.0.0.1:8080/static/fonts/Poppins-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('http://127.0.0.1:8080/static/fonts/Poppins-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('http://127.0.0.1:8080/static/fonts/Poppins-Italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Poppins, sans-serif;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 130%;
+            margin-left: -15%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ffffff;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #05221e;
+            color: white;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 50%;
+            opacity: 0.2;
+            transform: translate(-50%, -50%);
+            background: url("{{ image_url }}") no-repeat center;
+            background-size: contain;
+            z-index: -1;
+        }
+
+        .header {
+            position: fixed;
+            top: -9%;
+            left: 50%;
+            width: 125%;
+            height: 12%;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            z-index: -1;
+            background-color: #333;
+            color: white
+        }
+
+        .header img {
+            position: fixed;
+            width: 7.5%;
+            top: -7%;
+            right: 350px;
+        }
+
+        .header h6 {
+            position: fixed;
+            right: 27%;
+            font-size: medium;
+            top: -11.5%;
+        }
+
+        .header p {
+            position: fixed;
+            right: -325px;
+            top: -4.3%;
+        }
+
+        .header hr {
+            position: fixed;
+            right: 26%;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: -12%;
+            left: -25%;
+            width: 150%;
+            height: 6%;
+            z-index: -1;
+            background-color: #0a1a2a;
+            color: white;
+        }
+
+        .footer h6 {
+            font-size: medium;
+            margin-top: 20px;
+        }
+
+        .completada {
+            background-color: #33a28e
+        }
+
+        .pendiente {
+            background-color: #feae33;
+        }
+
+        .cancelada {
+            background-color: #04251e;
+            color: white;
+        }
+
+        .convenciones {
+            position: absolute;
+            left: 475px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ logo }}" alt="Logo Bolicheck" />
+        <h6>Bolicheck</h6>
+        <hr style="border: 1px solid rgb(255, 255, 255); width: 30%; right:5%; top:-3.5%" />
+        <p style="width: 1000px;">Reporte generado el: {{ fecha }}</p>
+    </div>
+    <div class="watermark"></div>
+    <div class="container">
+        <h1>{{ titulo }}</h1>
+        <div style="margin-right: auto; margin-left: auto;">
+            <img src="{{ imagen_grafico }}" 
+            style="width: 120%; height: auto; margin-left: -10%;" 
+            alt="Gráfico de Ventas">
+        </div>
+        <div class="table-container">
+            
+        </div>
+    </div>
+    <div class="footer">
+        <h6>© 2024 Play house - Todos Los Derechos Reservados</h6>
+    </div>
+</body>
+
+</html>
