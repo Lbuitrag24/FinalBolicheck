@@ -284,7 +284,8 @@ class ProductViewSet(viewsets.ModelViewSet):
                     description=f"Se inhhabilita el producto {product.name}."
                 )
             product.save()
-            return Response({"message": f"El producto ahora tiene el estado de {"disponible" if product.is_available else "no disponible"}."}, status=status.HTTP_200_OK)
+            estado = "disponible" if product.is_available else "no disponible"
+            return Response({"message": f"El producto ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK)      
         except Product.DoesNotExist:
             return Response({"message": "El producto no ha sido encontrado."}, status=status.HTTP_404_NOT_FOUND)
 
