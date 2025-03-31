@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd Bolicheck2
 # Instalar dependencias de Django
 pip install -r requirements.txt
 
