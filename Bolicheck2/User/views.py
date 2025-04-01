@@ -23,16 +23,9 @@ from django.templatetags.static import static
 
 
 
-def create_superuser():
-    CustomUser.objects.create_superuser(
-        'admin',  # Username
-        'admin@example.com',  # Email
-        '12345678', # password
-        telephone_number='3134572692', #telefono
-        identification_number='1025249'  # cedula
-    )
 
-create_superuser()
+
+
 
 def generar_reporte_empleados(request):
     fecha = datetime.datetime.now().date()
