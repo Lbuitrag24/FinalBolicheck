@@ -258,7 +258,7 @@ class PasswordResetRequestView(APIView):
             return Response({"message": "No hemos encontrado un usuario relacionado a este email."}, status=status.HTTP_404_NOT_FOUND)
         token = default_token_generator.make_token(user)
         uid = urlsafe_base64_encode(force_bytes(user.pk))
-        reset_link = f"http://localhost:5173/reset-password/{uid}/{token}/"
+        reset_link = f"https://finalbolicheckfront.onrender.com/reset-password/{uid}/{token}/"
         enviar_reestablecimiento(user.email, user.first_name, reset_link)
         return Response({"message": "Revisa tu bandeja de entrada, pues hemos enviado el link para el reestablecimiento de tu contraseña."}, status=status.HTTP_200_OK)
 
