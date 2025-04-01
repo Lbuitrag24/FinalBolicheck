@@ -27,6 +27,6 @@ class PrizeViewSet(viewsets.ModelViewSet):
             prize.is_available = not prize.is_available
             prize.save()
             estado = 'disponible' if prize.is_available else 'no disponible'
-            return Response({"message": f"El premio ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK),
+            return Response({"message": f"El premio ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK)
         except Prizes.DoesNotExist:
             return Response({"message": "El premio no ha sido encontrado."}, status=status.HTTP_404_NOT_FOUND)
