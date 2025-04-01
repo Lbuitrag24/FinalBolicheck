@@ -22,6 +22,7 @@ from rest_framework.exceptions import ValidationError
 from User.models import CustomUser
 from django.core.files.storage import default_storage
 from django.utils.timezone import make_aware
+from django.conf import settings
 
 def generar_reporte_ventas(request, ventas, titulo):
     if not ventas.exists():
@@ -134,8 +135,8 @@ def generar_reporte_mas_vendidos(request):
     buffer.close()
     grafico_base64 = base64.b64encode(image_png).decode("utf-8")
     imagen_grafico = f"data:image/png;base64,{grafico_base64}"
-    image_url = request.build_absolute_uri(static("images/bolicheck_Logo.png"))
-    logo = request.build_absolute_uri(static("images/bolicheck_Logo2.png"))
+    image_url = request.build_absolute_uri(settings.STATIC_URL + "images/bolicheck_Logo.png")
+    logo = request.build_absolute_uri(settings.STATIC_URL + "images/bolicheck_Logo2.png")
     html_string = render_to_string(
         "reports/mas_vendidos.html",
         {
