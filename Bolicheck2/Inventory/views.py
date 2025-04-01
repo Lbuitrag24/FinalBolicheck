@@ -46,8 +46,10 @@ def generar_reporte_ventas(request, ventas, titulo):
         buffer.close()
         grafico_base64 = base64.b64encode(image_png).decode("utf-8")
         imagen_grafico = f"data:image/png;base64,{grafico_base64}"
-        image_url = request.build_absolute_uri(static("images/bolicheck_Logo.png"))
-        logo = request.build_absolute_uri(static("images/bolicheck_Logo2.png"))
+        image_path = os.path.join(settings.BASE_DIR, "static/images/bolicheck_Logo.png")
+        image_url = f"file://{image_path}"
+        logo_path = os.path.join(settings.BASE_DIR, "static/images/bolicheck_Logo2.png")
+        logo = f"file://{logo_path}"
         html_string = render_to_string(
             "reports/ventas.html",
             {"imagen_grafico": imagen_grafico, "ventas": ventas,
@@ -91,8 +93,10 @@ def generar_reporte_productos(request, products, titulo):
     grafico_base64 = base64.b64encode(image_png).decode("utf-8")
     imagen_grafico = f"data:image/png;base64,{grafico_base64}"
     
-    image_url = request.build_absolute_uri(static("images/bolicheck_Logo.png"))
-    logo = request.build_absolute_uri(static("images/bolicheck_Logo2.png"))
+    image_path = os.path.join(settings.BASE_DIR, "static/images/bolicheck_Logo.png")
+    image_url = f"file://{image_path}"
+    logo_path = os.path.join(settings.BASE_DIR, "static/images/bolicheck_Logo2.png")
+    logo = f"file://{logo_path}"
     
     html_string = render_to_string(
         "reports/productos.html",
