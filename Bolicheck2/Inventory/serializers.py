@@ -26,18 +26,29 @@ class ProductSerializer(serializers.ModelSerializer):
         return ProductsHistorySerializer(history_entries, many=True).data
     
     def validate_min_stock(self, value):
-        if value > int(self.initial_data.get("stock")) or value > int(self.initial_data.get("max_stock")):
-            raise serializers.ValidationError(f"El stock mínimo no puede ser mayor al stock actual o mayor al stock máximo, stock actual: {self.initial_data.get('stock')}.")
+        stock = self.initial_data.get("stock")
+        max_stock = self.initial_data.get("max_stock")
+        if stock is not None and max_stock is not None:
+            stock = int(stock)
+            max_stock = int(max_stock)
+            if value > stock or value > max_stock:
+                raise serializers.ValidationError(
+                    f"El stock mínimo no puede ser mayor al stock actual ({stock}) o mayor al stock máximo ({max_stock})."
+                )
         if value < 0:
             raise serializers.ValidationError("El stock mínimo no puede ser menor a cero.")
         return value
-    
+
     def validate_max_stock(self, value):
-        if value < int(self.initial_data.get("stock")) or value < int(self.initial_data.get("min_stock")):
-            raise serializers.ValidationError(f"El stock máximo no puede ser menor al stock actual o menor al stock mínimo, stock actual: {self.initial_data.get('stock')}.")
-        
-        if value < 0:
-            raise serializers.ValidationError("El stock máximo no puede ser menor a cero.")
+        stock = self.initial_data.get("stock")
+        min_stock = self.initial_data.get("min_stock")
+        if stock is not None and min_stock is not None:
+            stock = int(stock)
+            min_stock = int(min_stock)
+            if value < stock or value < min_stock:
+                raise serializers.ValidationError(
+                    f"El stock máximo no puede ser menor al stock actual ({stock}) o menor al stock mínimo ({min_stock})."
+                )
         return value
     
     def validate_price(self, value):
