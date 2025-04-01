@@ -31,7 +31,7 @@ class EventViewSet(viewsets.ModelViewSet):
             event.is_available = not event.is_available
             event.save()
             estado = 'disponible' if event.is_available else 'no disponible'
-            return Response({"message": f"El evento ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK),
+            return Response({"message": f"El evento ahora tiene el estado de {estado}."}, status=status.HTTP_200_OK)
         except Event.DoesNotExist:
             return Response({"message": "El evento no ha sido encontrado."}, status=status.HTTP_404_NOT_FOUND)
 
